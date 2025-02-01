@@ -54,7 +54,7 @@ const DropdownItems = () => {
                 <hr />
               </Link>
             </li>
-            <div className="flex flex-col items-center justify-center gap-3 mt-5"> 
+            <div className="flex flex-col items-center justify-center gap-3 mt-5">
               <li className="my-auto">
                 <Link
                   href="#"
