@@ -54,20 +54,21 @@ const DropdownItems = () => {
                 <hr />
               </Link>
             </li>
-            <li>
-              <a>Parent</a>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
+            <div className="flex flex-col items-center justify-center gap-3 mt-5"> 
+              <li className="my-auto">
+                <Link
+                  href="#"
+                  className="me-2 hover:border hover:border-x-0 hover:border-t-0 hover:border-b-blue-700 hover:text-blue-700 transition-all duration-1000"
+                >
+                  TRANSPORTS
+                </Link>
+              </li>
+              <li>
+                <button className="btn btn-primary text-white">
+                  Register Your Transport
+                </button>
+              </li>
+            </div>
           </ul>
         </div>
         {/* this button to close modal if -> clicked outside */}
