@@ -21,7 +21,7 @@ const Banner = () => {
       {/* Contents */}
       <div className="absolute left-2/4 top-[200px] flex h-[400px] w-full max-w-[920px] -translate-x-2/4 -translate-y-2/4 flex-col items-center md:top-2/4 ">
         <h1 className="mt-6 text-center text-xl font-bold text-white md:text-3xl">
-          WELCOME TO Our Transport Management
+          WELCOME TO TRASPORT
         </h1>
         <div className="focus-visible:ring-ring mt-2 w-[calc(100%-10px)] rounded bg-white/10 px-6 py-4 ring-offset-background backdrop-blur-sm focus-visible:outline-none focus-visible:ring-2  focus-visible:ring-offset-2">
           <Form action="">
@@ -89,7 +89,7 @@ const Banner = () => {
             </div>
             {/* input field ended */}
             <div className="mt-2 flex justify-center md:justify-end">
-              <button className="btn btn-primary shadow-sm shadow-white">
+              <button className="mt-4 inline-flex h-11 items-center justify-center rounded-md bg-blue-700 px-8 text-sm font-bold text-white  shadow shadow-zinc-400 hover:bg-slate-800 duration-1000">
                 Submit
               </button>
             </div>
