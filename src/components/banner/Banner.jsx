@@ -2,13 +2,13 @@ import Form from "next/form";
 
 const Banner = () => {
   return (
-    <div className="">
+    <div className="relative">
       {/* Background video */}
       <video
         autoPlay
         loop
         muted
-        className="w-full h-[550px] md:h-[500px] lg:h-[500px] xl:h-[520px] 2xl:h-[420px]   object-cover"
+        className="h-[550px] w-full object-cover md:h-[500px] lg:h-[500px] xl:h-[520px]   2xl:h-[420px]"
       >
         <source
           className="object-cover"
@@ -17,29 +17,81 @@ const Banner = () => {
         />
         Your browser does not support the video tag.
       </video>
-      <div className="absolute top-[200px] md:top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 w-full max-w-[920px] h-[400px]">
-        <h1 className="font-bold text-xl md:text-3xl text-center text-white mt-6">
+
+      {/* Contents */}
+      <div className="absolute left-2/4 top-[200px] flex h-[400px] w-full max-w-[920px] -translate-x-2/4 -translate-y-2/4 flex-col items-center md:top-2/4 ">
+        <h1 className="mt-6 text-center text-xl font-bold text-white md:text-3xl">
           WELCOME TO Our Transport Management
         </h1>
-        <div className="mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-white/10 backdrop-blur-sm w-[calc(100%-10px)] rounded py-4 px-6">
+        <div className="focus-visible:ring-ring mt-2 w-[calc(100%-10px)] rounded bg-white/10 px-6 py-4 ring-offset-background backdrop-blur-sm focus-visible:outline-none focus-visible:ring-2  focus-visible:ring-offset-2">
           <Form action="">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-center">
+            {/* input fields started */}
+            <div className="grid grid-cols-1 items-center gap-4 md:grid-cols-2  ">
               <div className="w-full">
-                <label htmlFor="" className="text-white font-bold leading-8">
-                  Destinations
+                <label htmlFor="" className="font-bold leading-8 text-white">
+                  From
                 </label>
                 <div className="relative bg-transparent">
-                  <div className="placeholder:text-zinc-800 placeholder:text-sm placeholder:font-medium hover:placeholder:text-transparent z-[9999] ">
+                  <div className="z-[9999] placeholder:text-sm placeholder:font-medium placeholder:text-zinc-800 hover:placeholder:text-transparent ">
                     <input
                       type="text"
                       placeholder="Enter Your Destination"
-                      className="input input-bordered w-full max-w-xs "
+                      className="input input-bordered w-full "
                     />
                   </div>
                 </div>
               </div>
-              <div></div>
-              <div></div>
+              <div className="w-full">
+                <label htmlFor="" className="font-bold leading-8 text-white">
+                  Select Date
+                </label>
+                <div className="relative bg-transparent">
+                  <div className="z-[9999] placeholder:text-sm placeholder:font-medium placeholder:text-zinc-800 hover:placeholder:text-transparent ">
+                    {/* date picker start */}
+                    <input
+                      id="date"
+                      type="date"
+                      placeholder="dd/mm/yyyy"
+                      className="input input-bordered w-full"
+                    />
+                    {/* date picker end */}
+                  </div>
+                </div>
+              </div>
+              <div className="w-full">
+                <label htmlFor="" className="font-bold leading-8 text-white">
+                  Destination
+                </label>
+                <div className="relative bg-transparent">
+                  <div className="z-[9999] placeholder:text-sm placeholder:font-medium placeholder:text-zinc-800 hover:placeholder:text-transparent ">
+                    <input
+                      type="text"
+                      placeholder="Enter Your Destination"
+                      className="input input-bordered w-full "
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="w-full">
+                <label htmlFor="" className="font-bold leading-8 text-white">
+                  Number Of Seats
+                </label>
+                <div className="relative bg-transparent">
+                  <div className="z-[9999] placeholder:text-sm placeholder:font-medium placeholder:text-zinc-800 hover:placeholder:text-transparent ">
+                    <input
+                      type="number"
+                      placeholder="How many seats?"
+                      className="input input-bordered w-full "
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* input field ended */}
+            <div className="mt-2 flex justify-center md:justify-end">
+              <button className="btn btn-primary shadow-sm shadow-white">
+                Submit
+              </button>
             </div>
           </Form>
         </div>
